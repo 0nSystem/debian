@@ -43,7 +43,7 @@ conf_desktop()
 	cat tint2rc > /etc/xdg/tint2/tint2rc
 	echo "tint2 &" >>/etc/xdg/openbox/autostart
 	#Conky
-	cp .conkyrc /etc/conky/conky.conf
+	cp conky.conf /etc/conky/conky.conf
 	echo "conky &">>/etc/xdg/openbox/autostart
 }
 if [ $(id -u) -ne 0 ]
