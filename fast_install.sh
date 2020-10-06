@@ -2,8 +2,12 @@
 
 sudoers()
 {
-	usuario="onsystem"
-	echo "$usuario ALL=(ALL:ALL) ALL" >>/etc/sudoers
+	echo "\n\n\tDime el nombre de tu usuario para meterlo en sudoers si quieres"
+	read usuario
+	if [ $usuario =! " " ]
+	then
+		echo "$usuario ALL=(ALL:ALL) ALL" >>/etc/sudoers
+	fi
 }
 #Repositorios
 repository()
